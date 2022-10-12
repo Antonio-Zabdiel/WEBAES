@@ -1,32 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">       
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/style2.css">
-    <title>AES</title>
-</head>
-<body>
-    <div class="container">
-        <div class="card-panel teal lighten-2">
-            <h3>Cifrado y Desifrado AES</h3>
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/aes.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">       
+        <link rel="stylesheet" href="./css/style.css">  
+        <script src="./js/cifrar.js"></script>
+        <title>Cifrado AES</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card-panel teal lighten-2"><h6>Cifrado AES</h6></div>
+            
+            <form action="#">
+                <p>Seleccione la longitud de la clave</p>
+                <p><label>
+                    <input class="with-gap" type="radio" id="128bt" name="nbit" value="128"/>
+                    <span>128 bits</span>
+                </label></p>
+                <p><label>
+                    <input class="with-gap" type="radio" id="192bt" name="nbit" value="192"/>
+                    <span>192 bits</span>
+                </label></p>
+                <p><label>
+                    <input class="with-gap" type="radio" id="256bt" name="nbit" value="256"/>
+                    <span>256 bits</span>
+                </label></p>
+                
+                <label>Ingrese la clave</label>
+                <input type="text" id="clave" maxlength="32">
 
-        <p>Bienvenido Usuario, que dece hacer?</p>
-        
-        <a class="waves-effect #b39ddb deep-purple lighten-3 btn" href="./cifrar.html">
-            Cifrar
-            <i class="tiny material-icons">lock_outline</i>
-        </a>
-        <a class="waves-effect #b39ddb deep-purple lighten-3 btn" href="./descifrar.html">
-            Descifrar
-            <i class="tiny material-icons">lock_open</i>
-        </a>
-    </div>
-</body>
+                <input type="file" id="file">
+
+                <br>
+
+                <label>Mensaje Cifrado</label>
+                <textarea id="resultado"></textarea>
+
+                <input class="boton" type="button" id="Cifrar" value="cifrar" onclick="cifrado();"><!--opcion de descifrar-->
+            </form>
+
+            <a href="">
+                
+                
+            </a>
+        </div>
+    </body>
 </html>
