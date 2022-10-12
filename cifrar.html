@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">       
-    <link rel="stylesheet" href="./css/style.css">  
-    <title>Cifrado AES</title>
-</head>
-<body>
-    <div class="container">
-        <div class="card-panel teal lighten-2">
-            <h3>Cifrado AES</h3>
-        </div>
-        
-        <form action="#">
-            <p>Seleccione la longitud de la clave</p>
-            <p><label>
-                <input class="with-gap" type="radio" id="128bt" name="nbit"/>
-                <span>128 bits</span>
-            </label></p>
-            <p><label>
-                <input class="with-gap" type="radio" id="192bt" name="nbit"/>
-                <span>192 bits</span>
-            </label></p>
-            <p><label>
-                <input class="with-gap" type="radio" id="256bt" name="nbit"/>
-                <span>256 bits</span>
-            </label></p>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/aes.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">       
+        <link rel="stylesheet" href="./css/style.css">  
+        <title>Cifrado AES</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card-panel teal lighten-2">
+                <h3>Cifrado AES</h3>
+            </div>
             
-            <label>Ingrese la clave</label>
-            <input type="text" id="clave">
+            <form action="#">
+                <p>Seleccione la longitud de la clave</p>
+                <p><label>
+                    <input class="with-gap" type="radio" id="128bt" name="nbit"/>
+                    <span>128 bits</span>
+                </label></p>
+                <p><label>
+                    <input class="with-gap" type="radio" id="192bt" name="nbit"/>
+                    <span>192 bits</span>
+                </label></p>
+                <p><label>
+                    <input class="with-gap" type="radio" id="256bt" name="nbit"/>
+                    <span>256 bits</span>
+                </label></p>
+                
+                <label>Ingrese la clave</label>
+                <input type="text" id="clave">
 
-            <input type="file" id="mesage">
+                <input type="file" id="mesage">
 
-            <br>
+                <br>
 
-            <label>Mensaje a cifrar</label>
-            <textarea id="mensage2"></textarea>
+                <label>Mensaje a cifrar</label>
+                <textarea id="mensage2"></textarea>
 
-            <label>Mensaje Cifrado</label>
-            <textarea id="menscifr"></textarea>
+                <label>Mensaje Cifrado</label>
+                <textarea id="menscifr"></textarea>
 
-        </form>
+            </form>
 
-        <a class="waves-effect #b39ddb deep-purple lighten-3 btn" href="./index.html">
-            egresar
-            <i class="tiny material-icons">first_page</i>
-        </a>
-    </div>
-</body>
+            <a class="waves-effect #b39ddb deep-purple lighten-3 btn" href="./index.html">
+                egresar
+                <i class="tiny material-icons">first_page</i>
+            </a>
+        </div>
+    </body>
 </html>

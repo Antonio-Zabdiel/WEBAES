@@ -8,9 +8,6 @@ h3{
     text-align: center;
     font-size: 40px;
 }
-div{
-    text-align: center;
-}
 
 /*
 button{
@@ -23,7 +20,6 @@ button{
 }
 */
 p{
-    text-align: center;
     font-family: Arial;
     font-size: 20px;
 }
